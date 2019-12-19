@@ -19,7 +19,7 @@ function eventListener(){
 
 function localStorageOnLoad(){
     let tweets = getTweetFromStorage();
-    console.log(tweets);
+    
     tweets.forEach(function(tweet){
         
         // Create Remove Button
@@ -97,6 +97,6 @@ function removeTweetLocalStorage(tweet){
             tweets.splice(index, 1);
         }
     });
-    console.log(tweets);
+    
     localStorage.setItem('tweets', JSON.stringify(tweets));
 }
